@@ -8,15 +8,15 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { testimonial } from "../constant";
 import Image from "next/image";
 
-const Home = () => {
+const Login = () => {
   return (
-    <div className="flex">
+    <div className="flex font-karla">
       <div className="flex-1 bg-background min-h-screen w-full ">
         <div className="flex lg:hidden items-center justify-center gap-2 mt-6">
           <ICONS.Subtract />
           <div className="flex items-start">
             <div className="relative w-[60px] h-[26px]">
-              <Image src={"/uifry.png"} alt="uifry_logo" fill />
+              <Image src={"/uifry.png"} alt="uifry_logo" fill sizes="(max-width: 768px) 100vw, 60px" />
             </div>
             <p className="text-[4px] mt-1 ml-[2px] font-extrabold">TM</p>
           </div>
@@ -36,7 +36,7 @@ const Home = () => {
                 <SwiperSlide key={index}>
                   <div className="h-48">
                     <div className="mt-3 text-center mx-10">
-                      <p className="md:text-xl text-base w-full text-white">
+                      <p className="md:text-xl text-base w-full text-white font-bold">
                         {text.quote}
                       </p>
                       <p className="text-secondary md:text-lg text-sm font-bold mt-4">
@@ -84,7 +84,7 @@ const Home = () => {
                       ))}
                   </div>
                   <div className="mt-3">
-                    <p className="text-2xl w-[80%] text-white">{text.quote}</p>
+                    <p className="text-2xl w-[80%] text-white font-bold">{text.quote}</p>
                     <p className="text-secondary text-lg font-bold mt-4">
                       {text.name}
                     </p>
@@ -112,4 +112,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Login;

@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Home from "../page";
 import Sidebar from "../component/Sidebar";
+import Login from "@/app/(login)/page";
 
 describe("Home Component", () => {
   test("renders the Home component", () => {
-    render(<Home />);
+    render(<Login />);
 
     expect(screen.getByText("Welcome Back, Ali")).toBeInTheDocument();
     expect(
@@ -13,7 +13,7 @@ describe("Home Component", () => {
   });
 
   test("toggles the sidebar when the menu button is clicked", () => {
-    render(<Home />);
+    render(<Login />);
 
     expect(screen.queryByText("Close Sidebar")).not.toBeInTheDocument();
 
@@ -22,7 +22,7 @@ describe("Home Component", () => {
   });
 
   test("renders income and outcome cards with correct text", () => {
-    render(<Home />);
+    render(<Login />);
 
     const amounts = screen.getAllByText("$632.000");
     const incomeText = screen.getByText("Total Income");

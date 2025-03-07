@@ -41,19 +41,19 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="bg-background lg:min-h-screen max-lg:my-6 w-full flex flex-col items-center justify-center">
+    <div className="bg-background lg:min-h-screen max-lg:my-6 w-full flex flex-col items-center justify-center font-karla">
       <div className="text-white lg:w-1/2 mx-auto">
         <div className="lg:flex hidden items-center justify-center gap-2">
           <ICONS.Subtract />
           <div className="flex items-start">
             <div className="relative w-[60px] h-[26px]">
-              <Image src={"/uifry.png"} alt="uifry_logo" fill />
+              <Image src={"/uifry.png"} alt="uifry_logo" fill sizes="(max-width: 768px) 100vw, 60px"/>
             </div>
             <p className="text-[4px] mt-1 ml-[2px] font-extrabold">TM</p>
           </div>
         </div>
         <div className="text-center lg:my-4">
-          <p className="text-2xl font-bold">Welcome back, Ali Riaz 🙇🏾‍♀️</p>
+          <p className="text-2xl font-bold font-space-grotesk">Welcome back, Ali Riaz 🙇🏾‍♀️</p>
           <p className="mt-4 text-[#DCD9D9]">
             Login to access your Uifry account
           </p>

@@ -20,17 +20,24 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Project Information
 
-To learn more about Next.js, take a look at the following resources:
+Thsi project follows the exact design guide as given in the figma for the purpose of the test assessment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Login
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+To Login, enter a valid email and password of at least 8 characters. 
 
-## Deploy on Vercel
+Validations were made for the login input fields so anything short of the standard stated above will not login and will throw an error. 
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Successful login will take you to the dashboard page which will be visible via the metadata
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Dashboard
+
+The dashboard consists of 5 pages as implemented in the design but only the dashboard homepage and wallet page have contents, as implmented in the design. Other pages however will only show the title of the dashboard route.
+
+Reusable components such as Search, Inputs and Buttons were adopted to ensure clean code. Code was also broken down into components to ensure easy readability. Best optimizations were also adopted to ensure seamless page loadings 
+
+### Testing
+
+Jest was used to test for the entry pages such as Login page, Dashboard page and Wallet page.

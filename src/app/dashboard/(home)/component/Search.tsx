@@ -15,7 +15,7 @@ const Search = () => {
 //   const query = watch("searchQuery");
 
   return (
-    <div>
+    <div className="font-karla">
       <div className="relative">
         <Input
           control={control}

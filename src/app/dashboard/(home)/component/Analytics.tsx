@@ -57,7 +57,7 @@ export default function AnalyticsDashboard() {
   const [year, setYear] = useState("2020");
 
   return (
-    <div className="bg-background text-white p-6 rounded-2xl w-full mx-auto">
+    <div className="bg-background text-white p-6 rounded-2xl w-full mx-auto font-karla">
       <div className="flex justify-between items-center mb-3">
         <div className="flex items-center">
           <h2 className="lg:text-2xl text-lg font-bold">Analytics</h2>

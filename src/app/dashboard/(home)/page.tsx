@@ -13,7 +13,7 @@ const Home = () => {
   const [openMenu, setOpenMenu] = useState(false);
 
   return (
-    <div>
+    <div className="font-karla">
       <div className="flex md:flex-row flex-col md:justify-between md:items-center max-md:gap-4">
         <div className="">
           <div className="cursor-pointer lg:hidden block" data-testid="menu-icon">

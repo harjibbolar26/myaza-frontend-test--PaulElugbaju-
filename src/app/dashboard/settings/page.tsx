@@ -1,7 +1,7 @@
 import React from "react";
 
 const Settings = () => {
-  return <div>Settings</div>;
+  return <div className="font-karla">Settings</div>;
 };
 
 export default Settings;

@@ -4,7 +4,7 @@ import React from "react";
 
 const WalletHero = () => {
   return (
-    <div className="my-6 bg-background rounded-lg p-6">
+    <div className="my-6 bg-background rounded-lg p-6 font-karla">
       <p className="font-medium text-subdued max-lg:text-sm">Your consolidated balance</p>
       <div className="flex sm:flex-row flex-col sm:justify-between sm:items-center gap-4">
         <p className="lg:text-[28px] text-lg font-bold">$34,780,267.08</p>

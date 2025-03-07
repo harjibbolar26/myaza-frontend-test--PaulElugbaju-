@@ -7,7 +7,7 @@ import { useState } from "react";
 export default function Activity() {
   const [period, setPeriod] = useState("Month");
   return (
-    <div className="bg-background p-6 rounded-xl w-full lg:h-auto md:h-auto max-lg:min-h-[460px] max-md:h-auto relative">
+    <div className="bg-background p-6 rounded-xl w-full lg:h-auto md:h-auto max-lg:min-h-[460px] max-md:h-auto relative font-karla">
       <div className="flex justify-between items-center mb-4">
         <h2 className="lg:text-2xl text-lg font-bold text-white">Activity</h2>
         <Select
@@ -20,11 +20,8 @@ export default function Activity() {
       </div>
 
       <div className="flex justify-center mb-4">
-        {/* Semi-circular gauge */}
         <div className="relative w-64 h-32">
           <svg className="w-full h-full" viewBox="0 0 200 100">
-            {/* Background arc */}
-            {/* Purple arc (55%) */}
             <path
               d="M 20,100 A 80,80 0 0 1 180,100"
               fill="none"
@@ -45,7 +42,6 @@ export default function Activity() {
               pathLength="100"
               className="transition-all duration-1000"
             />
-            {/* Blue arc (20%) */}
             <path
               d="M 20,100 A 80,80 0 0 1 180,100"
               fill="none"

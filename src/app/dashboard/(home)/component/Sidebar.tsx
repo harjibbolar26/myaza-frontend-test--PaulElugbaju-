@@ -41,7 +41,7 @@ const Sidebar: FC<ISidebar> = ({ className, setMenuOpen }) => {
   return (
     <div
       className={twMerge(
-        "bg-[#1D1D41] z-50 w-64 min-h-screen fixed p-6",
+        "bg-[#1D1D41] z-50 w-64 min-h-screen fixed p-6 font-karla",
         className
       )}
     >
@@ -50,13 +50,18 @@ const Sidebar: FC<ISidebar> = ({ className, setMenuOpen }) => {
           <ICONS.Subtract />
           <div className="flex items-start">
             <div className="relative w-[60px] h-[26px]">
-              <Image src={"/uifry.png"} alt="uifry_logo" fill />
+              <Image
+                src={"/uifry.png"}
+                alt="uifry_logo"
+                fill
+                sizes="(max-width: 768px) 100vw, 60px"
+              />
             </div>
             <p className="text-[4px] text-white mt-1 ml-[2px] font-extrabold">
               TM
             </p>
           </div>
-        </div>
+        </div>r
         <div
           className="lg:hidden block cursor-pointer"
           onClick={() => setMenuOpen && setMenuOpen(false)}

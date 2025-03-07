@@ -53,6 +53,7 @@ const RecentTx = () => {
                       alt={tx.name}
                       fill
                       className="rounded-full object-contain p-1"
+                      sizes="(max-width: 768px) 100vw, 60px"
                     />
                   </div>
                   <span>{tx.name}</span>
