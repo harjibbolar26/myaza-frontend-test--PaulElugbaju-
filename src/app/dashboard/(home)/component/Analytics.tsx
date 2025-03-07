@@ -12,9 +12,6 @@ import {
   ResponsiveContainer,
   type TooltipProps,
 } from "recharts";
-// import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-
-// Sample data based on the image
 const data = [
   { name: "Jan", income: 37000, outcome: 27000 },
   { name: "Feb", income: 27000, outcome: 34000 },
@@ -28,7 +25,6 @@ const data = [
 
 const selectYear = ["2020", "2021", "2022"];
 
-// Custom tooltip component
 const CustomTooltip = ({
   active,
   payload,
@@ -58,31 +54,22 @@ export default function AnalyticsDashboard() {
 
   return (
     <div className="bg-background text-white p-6 rounded-2xl w-full mx-auto font-karla">
-      <div className="flex justify-between items-center mb-3">
+      <div className="flex md:flex-row flex-col gap-3 justify-between md:items-center mb-3">
         <div className="flex items-center">
           <h2 className="lg:text-2xl text-lg font-bold">Analytics</h2>
         </div>
 
-        <div className="flex items-center gap-8">
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#6359E9]"></div>
-            <span>Income</span>
+        <div className="flex max-md:justify-between items-center gap-8">
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#6359E9]"></div>
+              <span>Income</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 rounded-full bg-[#64CFF6]"></div>
+              <span>Outcome</span>
+            </div>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="w-3 h-3 rounded-full bg-[#64CFF6]"></div>
-            <span>Outcome</span>
-          </div>
-
-          {/* <Select value={year} onValueChange={setYear}>
-            <SelectTrigger className="w-[80px] bg-transparent border border-gray-600 text-white">
-              <SelectValue placeholder="Year" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="2020">2020</SelectItem>
-              <SelectItem value="2021">2021</SelectItem>
-              <SelectItem value="2022">2022</SelectItem>
-            </SelectContent>
-          </Select> */}
           <Select
             options={selectYear}
             setState={setYear}
@@ -98,7 +85,7 @@ export default function AnalyticsDashboard() {
           <BarChart
             data={data}
             margin={{ top: 20, right: 0, left: -25, bottom: 5 }}
-            barGap={-20}
+            barGap={window.innerWidth < 640 ?-5 : -20}
           >
             <CartesianGrid
               strokeDasharray="7 7"

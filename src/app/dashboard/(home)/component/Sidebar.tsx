@@ -61,7 +61,7 @@ const Sidebar: FC<ISidebar> = ({ className, setMenuOpen }) => {
               TM
             </p>
           </div>
-        </div>r
+        </div>
         <div
           className="lg:hidden block cursor-pointer"
           onClick={() => setMenuOpen && setMenuOpen(false)}

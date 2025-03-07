@@ -6,7 +6,7 @@ import { IRecentTx } from "../../constant";
 const RecentTxMobileCard = ({ tx }: { tx: IRecentTx }) => {
   return (
     <div className="font-karla">
-      <div className="bg-background p-6 rounded-lg mt-6 w-full">
+      <div className="bg-background p-6 rounded-lg w-full">
         <div className="flex items-center gap-3 py-1 flex-1">
           <div
             className={twMerge(
