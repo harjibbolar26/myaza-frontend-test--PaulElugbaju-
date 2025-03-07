@@ -37,3 +37,9 @@ Reusable components such as Search, Inputs and Buttons were adopted to ensure cl
 ### Testing
 
 Jest was used to test for the entry pages such as Login page, Dashboard page and Wallet page.
+
+Enter the command below in your terminal to run the test
+
+```bash
+npm test
+```
