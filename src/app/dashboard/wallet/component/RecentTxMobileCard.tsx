@@ -20,6 +20,7 @@ const RecentTxMobileCard = ({ tx }: { tx: IRecentTx }) => {
               src={`/${tx.logo}`}
               alt={tx.name}
               fill
+              sizes="(max-width: 768px) 100vw, 60px"
               className="rounded-full object-contain p-1"
             />
           </div>

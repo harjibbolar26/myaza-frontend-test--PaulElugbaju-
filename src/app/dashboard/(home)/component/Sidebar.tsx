@@ -108,6 +108,7 @@ const Sidebar: FC<ISidebar> = ({ className, setMenuOpen }) => {
               src={"/AliRiaz.png"}
               alt="AliRiaz"
               fill
+              sizes="(max-width: 768px) 100vw, 60px"
               className="rounded-full"
             />
           </div>
