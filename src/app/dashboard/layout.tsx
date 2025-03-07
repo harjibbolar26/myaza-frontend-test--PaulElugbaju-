@@ -13,7 +13,7 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex font-karla">
-      <div className="fixed font-sans z-50 hidden lg:block">
+      <div className="z-50 hidden lg:block">
         <Sidebar />
       </div>
       <div className="flex-1 bg-backgroundSec min-h-screen text-white">
