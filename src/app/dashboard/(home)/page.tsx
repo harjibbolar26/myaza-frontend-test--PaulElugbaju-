@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Search from "./component/Search";
 import { ICONS } from "@/assets";
 import AnalyticsDashboard from "./component/Analytics";
@@ -11,6 +11,12 @@ import Sidebar from "./component/Sidebar";
 
 const Home = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // This ensures window-dependent code only runs on the client
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   return (
     <div className="font-karla">
@@ -21,10 +27,10 @@ const Home = () => {
           </div>
           <p className="lg:text-2xl text-lg font-bold">Welcome Back, Ali</p>
           <p className="lg:text-base text-subdued text-sm">
-            Here’s what’s happening with your store today.
+            Here&apos;s what&apos;s happening with your store today.
           </p>
         </div>
-        <Search />
+        {isClient && <Search />}
       </div>
 
       <div className="flex lg:flex-row flex-col items-start gap-6 my-6">
@@ -34,7 +40,7 @@ const Home = () => {
               <div className="flex items-end justify-between gap-4">
                 <div className="flex gap-4 items-center">
                   <div className="bg-[#64CFF6] h-10 w-10 rounded ">
-                    <ICONS.ArrowRightDown />
+                    {isClient && <ICONS.ArrowRightDown />}
                   </div>
                   <div>
                     <p className="text-secondary text-sm">Total Income</p>
@@ -51,7 +57,7 @@ const Home = () => {
               <div className="flex items-end justify-between gap-4">
                 <div className="flex gap-4 items-center">
                   <div className="bg-[#6359E9] h-10 w-10 rounded ">
-                    <ICONS.ArrowRightUp />
+                    {isClient && <ICONS.ArrowRightUp />}
                   </div>
                   <div>
                     <p className="text-secondary text-sm">Total Outcome</p>
@@ -64,13 +70,13 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <AnalyticsDashboard />
-          <RecentTx />
+          {isClient && <AnalyticsDashboard />}
+          {isClient && <RecentTx />}
         </div>
         <div className="rounded-2xl lg:w-[40%] w-full space-y-6">
           <div className="flex gap-6 lg:flex-col md:flex-row flex-col items-start">
-            <MyCard />
-            <Activity />
+            {isClient && <MyCard />}
+            {isClient && <Activity />}
           </div>
         </div>
       </div>
